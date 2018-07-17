@@ -1,0 +1,22 @@
+private static class Rectangle extends GeometricObject {
+	//private data fields we need
+	private double width;
+	private double length;
+//arg-cosntructor
+	public Rectangle(double width, double length) {}
+	public Rectangle(double width, double length, String color, boolean filled) {}
+//getter : return width
+	public double getWidth() {}
+// setter for width
+	public void setWidth(double width) {}
+//getter for length
+	public double getLength() {}
+// setter : height with inputted value
+	public void setLength(double length) {}
+//getter: return area
+	public double getArea()
+// getter : return perimeter
+	public double getPerimeter() {}
+// Override method
+	public boolean equals(Object obj) {}
+}

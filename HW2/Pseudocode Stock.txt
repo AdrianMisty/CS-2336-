@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Stock {
+   public static void main(String[] args) {		
+		//create stock object	
+		//print out desired format
+		//use information provided in word doc
+	}  
+String symbol;
+String name;
+double previousClosingPrice;
+double currentPrice;
+//constructor that creates stock w/ symbol and name
+public Stock(String symbo, String nam) {
+	}
+public String getSymbol() {
+	//return symbol
+	}
+public void setSymbol(String symbo) {
+	//set symbol to equal inputted value
+	}
+public String getName() {
+	//return name
+	}
+public void setName(String nam) {
+	//set name to equal inputted value
+	}
+public double getCurrentPrice() {
+	//return currentPrice
+	}
+public void setCurrentPrice(double currentPricee) {
+	 //set currentPrice
+	}
+public double getPreviousClosingPrice() {
+	//return previousClosingPrice
+	}
+public void setPreviousClosingPrice(double previousClosingPricee) {
+	//set previousClosingPrice value
+	}
+public double getChangePercent() {
+	//return result of method
+	}
+}

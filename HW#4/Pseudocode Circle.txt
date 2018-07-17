@@ -1,0 +1,15 @@
+ private static class Circle extends GeometricObject {
+   private double radius;
+   //arg-constructor 
+    public Circle(double radius) {}
+	public Circle(double radius, String color, boolean filled) {}
+    //getter : Return radius
+    public double getRadius() {}
+    //setter : set radius
+    public void setRadius(double radius) {}
+    //calculate diameter and return
+    public double getDiameter() {}
+    //Override method
+    public boolean equals(Object obj) {}
+}
+ 

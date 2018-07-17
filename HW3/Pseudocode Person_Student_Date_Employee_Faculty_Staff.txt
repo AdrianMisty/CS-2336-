@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+public class PERSON_STUDENT_ETC {
+
+	public static void main(String[] args) {
+        //create objects of each class and test toString method
+	}
+}
+
+class Person {
+
+protected String name;
+protected String address;
+protected String phoneNumber;
+protected String email;
+//getter & setter for different strings
+public Person(String name) {}
+public String getName() {}
+public void setName(String name) {}
+public String getAddress() {}
+public void setAddress(String address) {}
+public String getPhoneNumber() {}
+public void setPhoneNumber(String phoneNumber) {}
+public String getEmail() {}
+public void setEmail(String email) {}
+//override
+public String toString() {}
+}
+
+class MyDate {
+private String date;
+
+public MyDate(String date) {}
+public String getDate() {}
+}
+class Employee extends Person {
+
+protected double salary;
+protected String office;
+protected MyDate dateHired;
+
+public Employee(String name) {}
+public Employee(String name, double salary, String office, MyDate dateHired){} 
+public double getSalary() {}
+public void setSalary(double salary) {}
+public String getOffice() {}
+public void setOffice(String office) {}
+public MyDate getDateHired() {}
+public void setDateHired(MyDate dateHired) {}
+public String toString() {}
+}
+class Student extends Person {
+
+protected String status;
+
+public Student(String name) {}
+public Student(String name, String status) {}
+public String toString() {}
+}
+
+class Faculty extends Employee {
+
+protected String officeHours;
+protected String rank;
+
+public Faculty(String name) {}
+public Faculty(String name, String officeHours, String rank) {}
+public String getOfficeHours() {}
+public void setOfficeHours(String officeHours) {}
+public String getRank() {}
+public void setRank(String rank) {}
+public String toString() {}
+
+}
+
+class Staff extends Employee {
+protected String title;
+public Staff(String name) {}
+public Staff(String name, String title) {}
+public String getTitle() {}
+public void setTitle(String title) {}
+public String toString() {}
+
+}

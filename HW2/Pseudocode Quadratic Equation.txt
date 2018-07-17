@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Quadratic_Equation{
+    public static void main(String[] args) {
+    	input a,b,c values
+ 	create a qudrartic eq object
+	if/else to check discriminent >/=/ not zero 
+   }
+}
+public class Quadratic_Equation {
+ private a,b,c;
+ setA(){}
+ setB(){}
+ setC(){}
+ public QuadraticEq(double a, double b, double c){}
+ method getDiscrimininant(){
+  return discriminiant
+ }
+ method getRoot1(){
+ return root1;
+ }
+ method getRoot2(){
+ return root2;
+}
+} 

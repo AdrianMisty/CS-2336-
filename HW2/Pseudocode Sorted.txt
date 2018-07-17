@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Sorted {
+
+	public static void main(String[] args) {
+                //prompt user input
+                //process inputted list into an array
+		//invoke method isSorted
+	        // print out result in desired format
+		System.out.print("The list is" + s + "sorted");
+
+	}
+    //method neccesary
+	public static boolean isSorted(int[] list) {
+	//if not sorted, return false
+		return true;//if sorted
+	}
+}

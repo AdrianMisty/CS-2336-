@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class REMOVE_DUPLICATE {
+public static void main(String[] args) {
+	//prompt user for 10 #'s	
+	System.out.print("Enter ten integers : ");
+	//input user response into list
+	// invoke method	
+	// display the distinct integers seperated by exactly one space
+	System.out.print("The distinct integers are ");
+	}
+
+// neccessary method from word doc.
+public static void removeDuplicate(ArrayList<Integer> list) {		
+	//fill new list with elements
+	// check if it already exists in the list before adding
+	// delete all original contents
+	// add elements to list that has no duplicates
+	}
+}

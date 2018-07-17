@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Compute_Deviation {
+	public static void main(String[] args) {
+		System.out.print("Enter ten numbers : ");
+		// for loop can be used(?)
+		/*
+		 * //From question 7.11 : use an array... double num1 = inpu.nextDouble();
+		 * double num2 = inpu.nextDouble();
+		 */
+		double[] num = new double[10];
+
+		for (int a = 0; a < num.length; a++) {
+			//fill in array with numbers inputted by  user
+		}
+		// out put for mean: 3.11 standard deviation : 1.55738
+		//use %.5f
+}
+
+// Methods necessary and they must return a value
+public static double deviation(double[] x) {
+	//calculate standard deviation
+	return result;
+	}
+public static double mean(double[] x) {
+	// reutrn mean
+	}
+
+}

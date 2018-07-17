@@ -1,0 +1,31 @@
+public class Tax {
+	public static void main(String[] args) {
+	int [][] brackets2001 = new int[][] {}
+	int[][] brackets2009 = new int[][] {}
+        //single , married jointly/widow, married seperate, head of house
+	double[] rates2001 = new double[] {}
+	double[] rates2009 = new double[] {}
+        // display titles for tax tables
+	
+	//make tax tables for taxable income from 2001
+	//$50,000 -$60,000 with intervals of $1,000
+
+	//make tax tables for taxable income from 2009
+	//$50,000 -$60,000 with intervals of $1,000
+}
+public static final int SINGLE_FILER = 0;
+public static final int MARRIED_JOINTLY_OR_QUALIFYING_WIDOW = 1;
+public static final int MARRIED_SEPARATELY = 2;
+public static final int HEAD_OF_HOUSEHOLD = 3;
+
+private int filingStatus; //1 of 4 tax filing statuses
+private int[][] brackets; //stores the tax brackets for each filing status
+private double[] rates;   //stores the tax rates for each bracket
+private double taxableIncome; //stores the taxable income
+
+public Tax() {}
+public Tax(int filingStatus, int[][] brackets, double[] rates, double taxableIncome) {}
+//make getter and setters for data fields
+public double getTax(){}
+
+}

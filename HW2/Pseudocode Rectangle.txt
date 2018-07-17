@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Rectangle {
+	public static void main(String[] args) {
+	// create two objects
+	Rectangle rect1 = new Rectangle(4, 40);
+	Rectangle rec2 = new Rectangle(3.5, 35.9);
+	//print out in desired format
+	}
+// default value for width and height is 1
+public Rectangle() {
+	// no-arg constructor that creates a default rectangle
+	}
+public Rectangle(double wid, double heig) {
+	//create rectangle with width and height
+	}
+public double getWidth() {
+		//return width;
+	}
+public double getHeight() {
+	//return height;
+	}
+public double getArea() {
+	 //return area	
+	}
+public double getPerimeter() {
+	//return perimeter
+	}
+
+}

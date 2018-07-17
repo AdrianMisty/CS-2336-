@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.util.*;
+
+public class Partition_Of_A_List {
+	public static void main(String[] args) {
+		// allow user to enter list of #'s
+		System.out.print("Enter list :");
+		// fill array with user's list so we can use the method partition
+		for (int i = 0; i < lista.length; i++) {
+		}		
+		partition(x);//call method
+
+		System.out.print("After the partition, the list is : ");
+		// w/o for loop, doesn't work for all scenarios
+		// print out post partition list
+	}
+// method that partitions the lst using the first element,called a pivot
+public static int partition(int[] lista) {
+	int partition = lista[0]; // 1st element was chosen
+	int pLocation = 0; // pivot
+	int last = lista.length-1 ;//length, error of index no bounds 
+
+	while (pLocation < last) {
+	// arrange elements less than pivot to be in front of it
+			
+	}
+	// method returns index of pivot's location
+	return pLocation;
+	}
+}

@@ -1,0 +1,44 @@
+/*
+Name:Adriana Alva
+Class:CS 2336.0U1 
+*/
+import java.util.Scanner;
+import java.util.Scanner;
+public class DISPLAY_PRIME_NUMBERS {
+public static void main(String[] args) {
+
+	System.out.println("Prime #'s < 120 in decreasing order ");
+
+	// we want prime #'s <120
+	for (int a = 2; a < 120; a++) {}
+	//as long as there is something in the stack
+	//keep going
+	while ()
+}
+//check that numbers is prime
+public static boolean isPrime(int num) {
+        //given a # and check all numbers that come before it	
+}
+
+class StackOfIntegers {
+
+int[] array;
+int size;
+
+// stack default value of capacity
+public StackOfIntegers() {}
+// stack with set capacity
+public StackOfIntegers(int capac) {
+}
+public int tothetop(int value) {
+	// move int to the top of the stack
+}
+// return size
+	public int getSize() {}
+// case 1: stack is empty
+	public boolean nothing() {}	
+// remove the element at the top of the stack after returning it
+	public int removeTop() {}
+// return the element at the top of the stack
+	public int top() {}
+}

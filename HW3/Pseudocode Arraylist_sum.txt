@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class ARRAYLIST_SUM {
+public static void main(String[] args) {
+	//prompt user for 5 numbers
+	Scanner in = new Scanner(System.in);
+        System.out.print("Enter 5 numbers : ");
+        //put inputed values into array list using for loop      
+        //display total sum
+        System.out.println("Total sum is : " + sum(list));
+
+	}
+//neccessary method from word doc
+public static double sum(ArrayList<Double> list) {
+        // calculate sum
+        //for(){} to add up elements in array list
+        //return total sum
+    }
+}

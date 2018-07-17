@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Eliminate_Duplicates {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int[] num = new int[10]; 
+	        System.out.print("Enter ten numbers : ");
+		  // use for loop to fill array num
+		  System.out.print("The distinct numbers are : ");
+		  //invoke method	
+	}
+public static int[] eliminateDuplicates(int[] list) {
+//first couple of elements will be the first verison of a duplicate
+//so let's set IsItACopy 
+	boolean IsItACopy = false;
+
+	for () {}   
+	if (!IsItACopy) {}
+       // create two different arrays to help create an array
+       //that has no duplicates
+         if/else or for loop (?)
+       // fill in the result array
+		for(){} 
+       // return new array that has duplicates eliminated
+		return result;
+       }
+}

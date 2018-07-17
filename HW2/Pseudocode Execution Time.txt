@@ -1,0 +1,30 @@
+public class Execution_time {
+	public static void main(String[] args) {
+	int[] arr = new int[100000];
+		 
+	 //random numbers to fill the array up
+	// invoke all methods
+           1). Linear Search
+           2). Sort Array
+           3). Binary Search
+        // display in desired format	
+        //calculate and display execution time
+	long startTime = System.currentTimeMillis();
+	perform the task;
+	long endTime = System.currentTimeMillis();
+	long executionTime = endTime - startTime;		 
+}
+//methods needed to make this program run		 
+public static int intRandom(int lowerBound, int upperBound) {
+//generate random numbers
+}		 
+public static void selectionSort(int[] list) {
+ // must sort array 
+} 
+public static int linearSearch(int[] list, int key) {
+// write code for a linear Search that uses the array, and key that's generated
+}
+public static int binarySearch(int[] list, int key) {
+//Write code for a binary search that uses the array, and key that's generated
+}
+

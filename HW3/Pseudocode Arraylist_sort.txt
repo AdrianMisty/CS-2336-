@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ARRAYLIST_SORT {
+public static void main(String[] args) {
+		
+	Scanner in = new Scanner(System.in);
+	// prompt user to enter 5 numbers
+	System.out.print("Enter 5 numbers : ");
+	for (){} //for loop can be used to use inputted values
+	//invoke method
+	//display them in increasing order
+	System.out.println("Array in increasing order : ");
+	}
+	// neccessary method from word doc.
+	public static void sort(ArrayList<Integer> list) {
+        // sorting in increasing order
+	for () {
+            //check elements as to have smaller #'s on the left and
+           //larger numbers on the right
+        if(){}
+
+	}
+}
