@@ -39,11 +39,11 @@ Polymorphism : 3 + 2 = 5                  adding
 ------------------------------------------------------------------------------------------------------------------
                                             Waterfall vs Agile
 ------------------------------------------------------------------------------------------------------------------
-       Waterfall 	                                   |                         Agile
+       Waterfall 	                                                     Agile
 ------------------------------------------------------------------------------------------------------------------
-Have 1 goal and finish it all the way	               |             Do progress separately : milestones
-Changes aren't welcome	                             |             Change can be made easily
-Client interactions is very low                      |           	Client interactions are frequent
+Have 1 goal and finish it all the way	                         Do progress separately : milestones
+Changes aren't welcome	                                       Change can be made easily
+Client interactions is very low                                Client interactions are frequent
  ------------------------------------------------------------------------------------------------------------------
                                      Software Development Life Cycle
 ------------------------------------------------------------------------------------------------------------------
