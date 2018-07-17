@@ -1,0 +1,62 @@
+You don't want blue screen of death
+
+Tuesday, May 22, 2018
+3:07 PM
+
+JDK 1.7 & 1.8
+
+Words & Definition
+Pseudo code
+Flow chart
+UML : Unified Modeling Language 
+Implementation: IN->PROCESS-> OUT
+I/O :
+Test Case
+Testing : V&V => White Box/Black Box
+Testing : Unit Testing, Integration Testing
+Testing : QA,UAT(User Acceptance Testing)
+UI/GUI
+Class : Template
+Objects : Instances of Class living in own address
+Big Oh :
+Algorithm : step-by-step on how to solve a problem 
+Debugging :
+Functions :
+Structures : same as class minus security
+Syntax : grammar of language
+Abstraction : amount of info required in a given context
+Variables : memory location
+Proto-type : non- functional mockup 
+Loops : repetition structures
+Interface : interaction with other code
+Library : set of classes that can be interacted with
+Memory : any memory
+Efficiency :
+Method : same as functions
+Inheritance :
+Polymorphism : 3 + 2 = 5                  adding
+               "hello" + 3 = 3 hello3     concatenation
+------------------------------------------------------------------------------------------------------------------
+                                            Waterfall vs Agile
+------------------------------------------------------------------------------------------------------------------
+       Waterfall 	                                   |                          Agile
+------------------------------------------------------------------------------------------------------------------
+Have 1 goal and finish it all the way	               |              Do progress separately : milestones
+Changes aren't welcome	                             |              Change can be made easily
+Client interactions is very low                      |            	Client interactions are frequent
+ ------------------------------------------------------------------------------------------------------------------
+                                     Software Development Life Cycle
+------------------------------------------------------------------------------------------------------------------
+   Phase 1 : Requirement Analysis => Requirement Specification Document 
+   Phase 2 : Design
+   Phase 3 : Implementation
+   Phase 4 : Testing
+   Phase 5 : Deployment
+-------------------------------------------------------------------------------------------------------------------                    
+------------------------------
+Verify & Validate:
+------------------------------
+   Black box Testing:   Functional
+   White box Testing:   Code Review
+
+
