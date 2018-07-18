@@ -1,0 +1,142 @@
+No quiz today…it was a prank
+Thursday, May 31, 2018
+3:04 PM
+________________________________________________________
+	• Quizzes over chapters 2-6 will be given on Tuesday
+________________________________________________________
+Loops - control structures
+	     + Iterative structures
+	     + Repetition structures
+ Q. Why?
+ A. To Reduce the redundancy of  the # of statements
+      which must repeated based on the condition
+____________________________________________________________
+While loop
+	• 0 or more iterations
+	• Can be used for any type of looping
+	• Used when the # of iterations are not known in advance
+	• You can really use it for all loopings, but not preferred
+	• May terminate
+		○ User input
+		○ Break statement
+		○ Condition that occurs out of the loop condition
+		○ May never terminate(infinite loop)
+		○ Putting semicolon at the end of condition nullifies
+		 the loop
+		○ Sentential value : is a value terminates the loop
+	Syntax:
+		<condition>{}  
+____________________________________________________________    
+Break statement
+	Exit loop upon arriving at break
+			
+Continue statement
+	Ignores all statements below continuing when 
+	encountering continue
+	Moves to next iteration of the loop
+
+++prefix and postfix++ operators
+int i = 0;
+While(++i >0) {print i;}
+
+int i = 0; 
+While(i++ >=0) {print i;}
+----------------------------------------------------
+NESTED LOOPS : For<condition>{(loop w/in the loop)	 
+
+While<condition>{
+	        For<condition>{
+	          }
+	     }
+	}
+---------------------------------------------------	
+INDEPENDENT NESTED LOOPS :	
+
+for( j = 1; j <= n ; j++){
+	     for( k = 1; k < 3*j ; k++){
+	                print k*j;
+	         }
+	  }
+		○ # of iterations: n*m
+		○ Time of analysis: Big-oh O(nm)
+---------------------------------------------------	
+Compilation error
+ 	for (int i=0; i<10; i++); {
+            
+   System.out.println("i is " + i);
+        
+ }
+ ---------------------------------------------------	
+Logical Error:	
+int i;        
+for (i=0; i<10; i++); {
+            
+  System.out.println("i is " + i);
+        
+}
+---------------------------------------------------	
+: WHILE LOOP EXAMPLE :
+public static void main(String[] args) {
+    int number = (int)(Math.random() * 101);
+	    Scanner input = new Scanner(System.in);
+    System.out.println("Guess a magic number between 0 and 100");
+	     int guess;
+    guess = input.nextInt();
+  while (guess != number) {
+      System.out.print("\nEnter your guess: ");
+      guess = input.nextInt();
+    } 
+  }
+
+: DO-WHILE LOOP EXAMPLE :	
+public static void main(String[] args) {
+    int number = (int)(Math.random() * 101);
+    int guess;
+    Scanner input = new Scanner(System.in);
+  do {
+      
+      System.out.println("Guess a magic number between 0 and 100");
+      guess = input.nextInt();
+      
+      
+    } while (guess != number) ;
+  }
+---------------------------------------------------	  
+
+Methods
+	• Allows you to modularize the code
+	• Function
+	• Procedure
+	• Simplifies the code
+	• Are called or invoked to be executed
+	
+	• Programming is about 
+		○ Input==>process==> output
+		○ Methods provide abstraction by hiding the implementation details
+	•  method definition = method header + method body
+	Header: public static void method(parameter list)
+	Parameter list: input variables
+	Void: output
+	Body:{}
+	• Local variables:
+		○ The scope of local variables is the block in which it is defined variables declared inside the method are local to that method
+            Local variables are NOT initialized by default
+
+		○ public static int M1(){return 1;}
+		○ public static string M2(){return "string in java";}
+		○ public static void M1(){return;}
+
+: Overloaded Methods :
+Public static int M1(int num1,int num2){ }
+Public static int M1(double num1, double num2){ }
+
+Do not do this to overload methods
+Calling M(1,2)==>program will be confused
+Public static int M1(int num1,double num2){ }
+Public static int M1(double num1, int num2){ }
+
+Call stack is on page 27
+
+C++ passes actual paramteres by value, reference and address of object
+Java passes actual paramteres by value and address of object
+
