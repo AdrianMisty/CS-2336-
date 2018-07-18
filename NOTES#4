@@ -1,0 +1,91 @@
+Quiz Day; Chapter 9
+
+Thursday, June 7, 2018
+3:26 PM
+-------------------------------------------------------------------------------------------------------------    
+Access specifiers
+		i.  public is open to all (+)
+		ii.  private is closed for all (-)
+		iii.  protected is public to children class and private to all (#)
+-------------------------------------------------------------------------------------------------------------    
+Primitive data type
+	  i. Char, boolean, int ,long , float, double
+	  ii. Referred to as variable
+	  iii. Hold values in memory
+	  iv. Int x; double y;
+-------------------------------------------------------------------------------------------------------------    
+Abstract data type(ADT)
+	  i. Classes
+	  ii. Referenced variables
+	  iii. Hold addresses of objects
+	  iv. Circle C; Scanner input;
+-------------------------------------------------------------------------------------------------------------    
+Local variables or reference
+	  i. Declared
+    ii. inside a loop condition
+    iii. Inside a method 
+    iv. Inside {}
+    v. Life is the block in which they are define
+    vi. Scope is the access within the block
+    vii. Primitives local are not initialized by default to 0, char or false
+-------------------------------------------------------------------------------------------------------------    
+Class variables
+    i. Declared anywhere in the class body outside of any method n the class
+       i. Public class {} within the braces
+    ii. Must be declared as static
+    iii. Programmer need to decide if a variable need to be class variable
+    iv. PI, e
+    v. Preferred to be public and final(constant)
+    vi. If made private then provide a static get function to retrieve
+    vii. No need an object to access these like Math.PI
+    viii. Doesn't make sense to create radius of a circle as class variable
+-------------------------------------------------------------------------------------------------------------      
+Instance variables
+    i. Property of the object not the class
+    ii. Also referred to as attribute 
+    iii. Instance variables are also called " the state of the class"
+    iv. Instance variables are initialized by default to 0, char or false
+    v. Must be made private to preserve encapsulation
+        a. Will need accessor and mutators to access the private attributes
+    vi. Derived  attributes 
+-------------------------------------------------------------------------------------------------------------    	
+ADT or Class or Template or Definition of an entity
+    i. Rules of good programming
+      i. Name of the class must define its behavior; JamesBond is not Valid
+    ii. Set of attributes + set of methods
+    iii. Methods 
+        i. 3 types of methods
+        ii. Constructor
+             i. Default Constructor ()
+        ii. Valued or arguments constructor (int r)
+        iii. Don't return any value so void is invalid
+        iv. Putting a void in a constructor will treat as a method
+        v. Constructors are invoked implicitly when an object is created
+        vi. Constructors ensure consistency of creation or instantiation
+        vii. When a class doesn't define any constructor 
+           1) Java will provide a default constructor 
+           2) Good practice is not to depend on java
+        viii. Rules of initialization of variables should be set methods
+        ix. So call the set method-help avoid duplication of code
+             Circle(int r){
+                  setRaduis(r);
+              }
+              1) Not circle (int r) {radius = r;}
+        x. Constructors can call other constructor by using the word "this"
+-------------------------------------------------------------------------------------------------------------    
+	Accessors(get) and Mutators (set) methods
+        i. Preferably need one for each attribute or instance variable 
+        ii. Must be declared public if to be accessed outside the class
+-------------------------------------------------------------------------------------------------------------       
+	Utility Methods
+      i. Will be used to derived attributes like area, gpa are created to support other methods
+      getArea(), getGpa()
+      ToString() method is an example
+        - toString() is defined in the grandparent class Object
+        - If you don't the Object method, then @override
+-------------------------------------------------------------------------------------------------------------    			
+	Destructors 
+      i. JVM will call the destructor 
+      ii. Implicit: when the object goes out of scope
+      iii. Explicit: when setting the object to null like circle1=null;
+-------------------------------------------------------------------------------------------------------------    	
