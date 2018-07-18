@@ -1,0 +1,116 @@
+Only do things that will benefit you
+Thursday, May 24, 2018
+_________________________________________
+Tomorrow Homework : Due Sunday 11:30 pm
+_________________________________________
+Next Week 
+	• Quizzes over lectures
+	• In class assignment
+
+Exam : Only 1 & it's multiple choice
+
+Project : There are only 2 
+		○  Interactive calculator 
+		○  Check eLearning
+
+Programs must be functional, pretty and you can explain it
+		○ Indentations 
+		○ Comments 
+
+	- Java program begins execution in main function
+	- There are "control structures" control the execution of Java code 
+  
+: Control Structures:
+1. Sequential structure --> default all programs will execute a statement at a time
+2. Conditional or Selection structure --> IF IF/ELSE, IF/ELSE IF/ELSE, SWITCH
+3. Repetition structure --> while, for, do-while, for each
+4. Method call --> creates a call stack
+5. try/catch
+
+Access Specifiers:
+public (open); private (closed); protected (for children class); default (package access)
+
+
+Example on Identifying errors
+
+	public class A {
+		      	System.out.println("Name is: " + B.getName());
+                 }
+	public class B {
+             public String getName() {
+                            return "B";
+                          }
+                 }
+
+
+Errors: 
+1. B.getName() is not allowed b/c method getName() is not static
+   non-static methods require the object to access the method
+2. System.out....call in class A is required inside some method
+
+Known Information:
+1. import java.lang.*; is there by default
+2. this package is required for System class, println() method
+3. Class B does not need a constructor; Java will provide a default constructor
+4. Class A or B don't need a main method
+
+Fix 1:
+public class A {
+public A() {
+     B b = new B();
+     System.out.println("Name is: " + b.getName());
+   }
+}
+public class B {  
+   public String getName() {return "B";}
+}
+=======================================================
+Example:
+public class HelloWorld {
+  public static void main(String[] args) {
+     A a = new A();
+      a.printB();
+   }
+ }
+public class A {
+public void printB() {
+     B b = new B();
+     System.out.println("Name is: " + b.getName());
+   }
+}
+public class B {
+  
+   public String getName() {return "B";}
+}
+=======================================================
+
+
+Fix 2:
+public class A {
+public A() {
+     System.out.println("Name is: " + B.getName());
+   }
+}
+public class B {
+  
+   public static String getName() {return "B";}
+}
+========================================
+Example 2:
+public class HelloWorld {
+  public static void main(String[] args) {
+      A a = new A();
+  }
+}
+public class A {
+     public A() {
+      System.out.println("Name is: " + B.getName());
+      }
+}
+public class B{
+   public static String getName()
+	 {
+	    return "B";
+             }
+ }
+============================================
