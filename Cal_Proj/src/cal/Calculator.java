@@ -2,6 +2,10 @@
  * Class : CS 2336
  * Date Started : 06-16-2018
  * Date (Finally) Finished : 07-21-2018
+ * Project Details:
+ * Create a calculator that resembles the windows 10 calculator
+ * in look and functions.
+ * Some buttons and functions won't be necessary : Word/Lsh/....
  * */
 
 package cal;
