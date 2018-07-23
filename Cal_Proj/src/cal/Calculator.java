@@ -8,6 +8,7 @@
  * Some buttons and functions won't be necessary : Word/Lsh/....
  * */
 
+
 package cal;
 
 import java.awt.EventQueue;
@@ -29,6 +30,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import java.awt.Dimension;
 import java.awt.Component;
+import javax.swing.UIManager;
 
 public class Calculator {
 
@@ -73,22 +75,23 @@ public class Calculator {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(SystemColor.controlHighlight);
 		frame.getContentPane().setForeground(Color.BLACK);
-		frame.setBounds(200, 100, 416, 785);
+		frame.setBounds(200, 100, 506, 860);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		// Label
 		JLabel ProgramerLabel = new JLabel("PROGRAMMER");
-		ProgramerLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
-		ProgramerLabel.setBounds(39, 0, 115, 26);
+		ProgramerLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
+		ProgramerLabel.setBounds(46, 2, 126, 36);
 		frame.getContentPane().add(ProgramerLabel);
 		// user input
 		textField = new JTextField();
 		textField.setBorder(null);
-		textField.setBackground(SystemColor.control);
+		textField.setBackground(SystemColor.controlHighlight);
 		textField.setHorizontalAlignment(SwingConstants.RIGHT);
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		textField.setBounds(9, 28, 358, 95);
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		textField.setBounds(9, 40, 456, 114);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		// Converters : HEX
@@ -103,17 +106,17 @@ public class Calculator {
 			}
 		});
 		lblHex.setHorizontalAlignment(SwingConstants.CENTER);
-		lblHex.setFont(new Font("Tahoma", Font.BOLD, 9));
-		lblHex.setBounds(9, 122, 55, 33);
+		lblHex.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblHex.setBounds(9, 162, 60, 33);
 		frame.getContentPane().add(lblHex);
 		// Output : HEX
 		HexTxtField = new JTextField();
 		HexTxtField.setBorder(null);
-		HexTxtField.setBackground(SystemColor.menu);
+		HexTxtField.setBackground(SystemColor.controlHighlight);
 		HexTxtField.setHorizontalAlignment(SwingConstants.LEFT);
-		HexTxtField.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		HexTxtField.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		HexTxtField.setColumns(10);
-		HexTxtField.setBounds(64, 123, 303, 33);
+		HexTxtField.setBounds(74, 163, 390, 33);
 		frame.getContentPane().add(HexTxtField);
 		// Converters : DEC
 		JButton lblDec = new JButton("DEC");
@@ -127,17 +130,17 @@ public class Calculator {
 
 		});
 		lblDec.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDec.setFont(new Font("Tahoma", Font.BOLD, 9));
-		lblDec.setBounds(9, 156, 55, 33);
+		lblDec.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblDec.setBounds(9, 196, 60, 33);
 		frame.getContentPane().add(lblDec);
 		// Output : DEC
 		DecTxtField = new JTextField();
 		DecTxtField.setBorder(null);
-		DecTxtField.setBackground(SystemColor.menu);
+		DecTxtField.setBackground(SystemColor.controlHighlight);
 		DecTxtField.setHorizontalAlignment(SwingConstants.LEFT);
-		DecTxtField.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		DecTxtField.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		DecTxtField.setColumns(10);
-		DecTxtField.setBounds(64, 153, 303, 36);
+		DecTxtField.setBounds(74, 193, 390, 36);
 		frame.getContentPane().add(DecTxtField);
 		// Converters : OCT
 		JButton lblOct = new JButton("OCT");
@@ -150,17 +153,17 @@ public class Calculator {
 			}
 		});
 		lblOct.setHorizontalAlignment(SwingConstants.CENTER);
-		lblOct.setFont(new Font("Tahoma", Font.BOLD, 9));
-		lblOct.setBounds(9, 190, 55, 33);
+		lblOct.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblOct.setBounds(9, 230, 60, 33);
 		frame.getContentPane().add(lblOct);
 		// Output : OCT
 		OctTxtField = new JTextField();
 		OctTxtField.setBorder(null);
-		OctTxtField.setBackground(SystemColor.menu);
+		OctTxtField.setBackground(SystemColor.controlHighlight);
 		OctTxtField.setHorizontalAlignment(SwingConstants.LEFT);
-		OctTxtField.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		OctTxtField.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		OctTxtField.setColumns(10);
-		OctTxtField.setBounds(64, 188, 303, 34);
+		OctTxtField.setBounds(74, 228, 391, 34);
 		frame.getContentPane().add(OctTxtField);
 		// Converters : BIN
 		JButton lblBin = new JButton("BIN");
@@ -173,47 +176,49 @@ public class Calculator {
 			}
 		});
 		lblBin.setHorizontalAlignment(SwingConstants.CENTER);
-		lblBin.setFont(new Font("Tahoma", Font.BOLD, 9));
-		lblBin.setBounds(9, 224, 55, 33);
+		lblBin.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblBin.setBounds(9, 264, 60, 33);
 		frame.getContentPane().add(lblBin);
 		// Output : BIN
 		BinTxtField = new JTextField();
 		BinTxtField.setBorder(null);
-		BinTxtField.setBackground(SystemColor.menu);
+		BinTxtField.setBackground(SystemColor.controlHighlight);
 		BinTxtField.setHorizontalAlignment(SwingConstants.LEFT);
-		BinTxtField.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		BinTxtField.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		BinTxtField.setColumns(10);
-		BinTxtField.setBounds(64, 223, 303, 32);
+		BinTxtField.setBounds(74, 263, 390, 32);
 		frame.getContentPane().add(BinTxtField);
 
 		JLabel FakeDotsLabel = new JLabel("");
+		FakeDotsLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		FakeDotsLabel.setForeground(SystemColor.menu);
 		FakeDotsLabel.setBorder(null);
-		FakeDotsLabel.setBackground(SystemColor.controlHighlight);
+		FakeDotsLabel.setBackground(SystemColor.menu);
 		FakeDotsLabel.setIcon(new ImageIcon("C:\\Users\\Misty\\Desktop\\dots.png"));
-		FakeDotsLabel.setBounds(9, 270, 45, 45);
+		FakeDotsLabel.setBounds(9, 310, 69, 58);
 		frame.getContentPane().add(FakeDotsLabel);
 
 		JLabel FakeGreyDotsLabel = new JLabel("");
 		FakeGreyDotsLabel.setBorder(null);
-		FakeGreyDotsLabel.setBackground(SystemColor.controlHighlight);
+		FakeGreyDotsLabel.setBackground(SystemColor.menu);
 		FakeGreyDotsLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		FakeGreyDotsLabel.setIcon(new ImageIcon("C:\\Users\\Misty\\Desktop\\Graydots.png"));
-		FakeGreyDotsLabel.setBounds(70, 270, 45, 45);
+		FakeGreyDotsLabel.setBounds(85, 310, 69, 58);
 		frame.getContentPane().add(FakeGreyDotsLabel);
 		// FIRST ROW OF BUTTONS
 		JButton Arrowbtn = new JButton("");
 		Arrowbtn.setBorder(null);
-		Arrowbtn.setBackground(SystemColor.controlHighlight);
+		Arrowbtn.setBackground(SystemColor.control);
 		Arrowbtn.setForeground(SystemColor.controlHighlight);
-		Arrowbtn.setFont(new Font("Tahoma", Font.PLAIN, 5));
+		Arrowbtn.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		Arrowbtn.setIcon(new ImageIcon(
 				Calculator.class.getResource("/com/sun/javafx/scene/control/skin/caspian/images/capslock-icon.png")));
-		Arrowbtn.setBounds(9, 386, 56, 56);
+		Arrowbtn.setBounds(9, 438, 69, 58);
 		frame.getContentPane().add(Arrowbtn);
 
 		JButton Modbtn = new JButton("Mod");
 		Modbtn.setBorder(null);
-		Modbtn.setBackground(SystemColor.controlHighlight);
+		Modbtn.setBackground(SystemColor.control);
 		Modbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstnum = Double.parseDouble(textField.getText());
@@ -222,37 +227,45 @@ public class Calculator {
 				operations = "%";// String variable takes in
 			}
 		});
-		Modbtn.setFont(new Font("Tahoma", Font.BOLD, 10));
-		Modbtn.setBounds(70, 386, 56, 56);
+		Modbtn.setFont(new Font("Tahoma", Font.BOLD, 12));
+		Modbtn.setBounds(85, 438, 69, 58);
 		frame.getContentPane().add(Modbtn);
 
 		JButton CEbtn = new JButton("CE");
 		CEbtn.setBorder(null);
-		CEbtn.setBackground(SystemColor.controlHighlight);
+		CEbtn.setBackground(SystemColor.control);
 		CEbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText(null);
+				DecTxtField.setText(null);
+				HexTxtField.setText(null);
+				OctTxtField.setText(null);
+				BinTxtField.setText(null);
 			}
 		});
 		CEbtn.setFont(new Font("Tahoma", Font.BOLD, 12));
-		CEbtn.setBounds(131, 386, 56, 56);
+		CEbtn.setBounds(163, 438, 69, 58);
 		frame.getContentPane().add(CEbtn);
 		// Clear Button
 		JButton Clearbtn = new JButton("C");
 		Clearbtn.setBorder(null);
-		Clearbtn.setBackground(SystemColor.controlHighlight);
+		Clearbtn.setBackground(SystemColor.control);
 		Clearbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText(null);
+				DecTxtField.setText(null);
+				HexTxtField.setText(null);
+				OctTxtField.setText(null);
+				BinTxtField.setText(null);
 			}
 		});
-		Clearbtn.setFont(new Font("Tahoma", Font.BOLD, 11));
-		Clearbtn.setBounds(192, 386, 56, 56);
+		Clearbtn.setFont(new Font("Tahoma", Font.BOLD, 12));
+		Clearbtn.setBounds(240, 438, 69, 58);
 		frame.getContentPane().add(Clearbtn);
 		// delete
 		JButton Deletebtn = new JButton("\uF0E7");
 		Deletebtn.setBorder(null);
-		Deletebtn.setBackground(SystemColor.controlHighlight);
+		Deletebtn.setBackground(SystemColor.control);
 		Deletebtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String backspace = null;
@@ -265,23 +278,36 @@ public class Calculator {
 				}
 			}
 		});
-		Deletebtn.setFont(new Font("Dialog", Font.PLAIN, 10));
-		Deletebtn.setBounds(253, 386, 56, 56);
+		Deletebtn.setFont(new Font("Dialog", Font.PLAIN, 12));
+		Deletebtn.setBounds(317, 438, 69, 58);
 		frame.getContentPane().add(Deletebtn);
 		// Divide
 		JButton Dividebtn = new JButton("/");
 		Dividebtn.setBorder(null);
-		Dividebtn.setBackground(SystemColor.controlHighlight);
+		Dividebtn.setBackground(SystemColor.control);
 		Dividebtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(textField.getText() == "A")
+				{firstnum =10;}	
+				else if(textField.getText() == "B")
+				{firstnum =11;}	
+				else if(textField.getText() == "C")
+				{firstnum =12;}	
+				else if(textField.getText() == "D")
+				{firstnum =13;}	
+				else if(textField.getText() == "E")
+				{firstnum =14;}	
+				else if(textField.getText() == "F")
+				{firstnum =15;}	
+				else
 				firstnum = Double.parseDouble(textField.getText());
 				// whatever # that is inputted is stored into firstnum
 				textField.setText("");
 				operations = "/";// String variable takes in
 			}
 		});
-		Dividebtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Dividebtn.setBounds(314, 386, 56, 56);
+		Dividebtn.setFont(new Font("Tahoma", Font.BOLD, 16));
+		Dividebtn.setBounds(394, 438, 69, 58);
 		frame.getContentPane().add(Dividebtn);
 		// SECOND ROWOF BUTTONS
 		JButton Abtn = new JButton("A");
@@ -291,7 +317,7 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNum = textField.getText() + Abtn.getText();
 				textField.setText(EnterNum);
-				int a = Integer.parseInt(textField.getText());
+				int a =10;
 				DecTxtField.setText(Integer.toString(a, 10));
 				HexTxtField.setText(Integer.toString(a, 16));
 				BinTxtField.setText(Integer.toString(a, 2));
@@ -300,7 +326,7 @@ public class Calculator {
 		});
 		Abtn.setForeground(Color.GRAY);
 		Abtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Abtn.setBounds(9, 447, 56, 56);
+		Abtn.setBounds(9, 504, 69, 58);
 		frame.getContentPane().add(Abtn);
 
 		JButton Bbtn = new JButton("B");
@@ -310,7 +336,7 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNum = textField.getText() + Bbtn.getText();
 				textField.setText(EnterNum);
-				int a = Integer.parseInt(textField.getText());
+				int a = 11;
 				DecTxtField.setText(Integer.toString(a, 10));
 				HexTxtField.setText(Integer.toString(a, 16));
 				BinTxtField.setText(Integer.toString(a, 2));
@@ -319,7 +345,7 @@ public class Calculator {
 		});
 		Bbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		Bbtn.setForeground(Color.GRAY);
-		Bbtn.setBounds(70, 447, 56, 56);
+		Bbtn.setBounds(85, 504, 69, 58);
 		frame.getContentPane().add(Bbtn);
 
 		JButton Seven7btn = new JButton("7");
@@ -338,7 +364,7 @@ public class Calculator {
 			}
 		});
 		Seven7btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Seven7btn.setBounds(131, 447, 56, 56);
+		Seven7btn.setBounds(163, 504, 69, 58);
 		frame.getContentPane().add(Seven7btn);
 
 		JButton Eight8btn = new JButton("8");
@@ -356,7 +382,7 @@ public class Calculator {
 			}
 		});
 		Eight8btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Eight8btn.setBounds(192, 447, 56, 56);
+		Eight8btn.setBounds(240, 504, 69, 58);
 		frame.getContentPane().add(Eight8btn);
 
 		JButton Nine9btn = new JButton("9");
@@ -374,15 +400,28 @@ public class Calculator {
 			}
 		});
 		Nine9btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Nine9btn.setBounds(253, 447, 56, 56);
+		Nine9btn.setBounds(317, 504, 69, 58);
 		frame.getContentPane().add(Nine9btn);
 		// Multiply
 		JButton Multiplybtn = new JButton("x");
 		Multiplybtn.setBorder(null);
-		Multiplybtn.setBackground(SystemColor.controlHighlight);
-		Multiplybtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		Multiplybtn.setBackground(SystemColor.control);
+		Multiplybtn.setFont(new Font("Tahoma", Font.BOLD, 18));
 		Multiplybtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(textField.getText() == "A")
+				{firstnum =10;}	
+				else if(textField.getText() == "B")
+				{firstnum =11;}	
+				else if(textField.getText() == "C")
+				{firstnum =12;}	
+				else if(textField.getText() == "D")
+				{firstnum =13;}	
+				else if(textField.getText() == "E")
+				{firstnum =14;}	
+				else if(textField.getText() == "F")
+				{firstnum =15;}	
+				else
 				firstnum = Double.parseDouble(textField.getText());
 				// whatever # that is inputted is stored into firstnum
 				textField.setText("");
@@ -390,7 +429,7 @@ public class Calculator {
 			}
 		});
 		// THIRD ROW OF BUTTONS
-		Multiplybtn.setBounds(314, 447, 56, 56);
+		Multiplybtn.setBounds(394, 504, 69, 58);
 		frame.getContentPane().add(Multiplybtn);
 
 		JButton Cbtn = new JButton("C");
@@ -400,7 +439,7 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNum = textField.getText() + Cbtn.getText();
 				textField.setText(EnterNum);
-				int a = Integer.parseInt(textField.getText());
+				int a =12;
 				DecTxtField.setText(Integer.toString(a, 10));
 				HexTxtField.setText(Integer.toString(a, 16));
 				BinTxtField.setText(Integer.toString(a, 2));
@@ -409,7 +448,7 @@ public class Calculator {
 		});
 		Cbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		Cbtn.setForeground(Color.GRAY);
-		Cbtn.setBounds(9, 508, 56, 56);
+		Cbtn.setBounds(9, 570, 69, 58);
 		frame.getContentPane().add(Cbtn);
 
 		JButton Dbtn = new JButton("D");
@@ -419,7 +458,7 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNum = textField.getText() + Dbtn.getText();
 				textField.setText(EnterNum);
-				int a = Integer.parseInt(textField.getText());
+				int a = 13;
 				DecTxtField.setText(Integer.toString(a, 10));
 				HexTxtField.setText(Integer.toString(a, 16));
 				BinTxtField.setText(Integer.toString(a, 2));
@@ -428,7 +467,7 @@ public class Calculator {
 		});
 		Dbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		Dbtn.setForeground(Color.GRAY);
-		Dbtn.setBounds(70, 508, 56, 56);
+		Dbtn.setBounds(86, 571, 69, 58);
 		frame.getContentPane().add(Dbtn);
 
 		JButton Four4btn = new JButton("4");
@@ -446,7 +485,7 @@ public class Calculator {
 			}
 		});
 		Four4btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Four4btn.setBounds(131, 508, 56, 56);
+		Four4btn.setBounds(163, 570, 69, 58);
 		frame.getContentPane().add(Four4btn);
 
 		JButton Five5btn = new JButton("5");
@@ -464,7 +503,7 @@ public class Calculator {
 			}
 		});
 		Five5btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Five5btn.setBounds(192, 508, 56, 56);
+		Five5btn.setBounds(240, 570, 69, 58);
 		frame.getContentPane().add(Five5btn);
 
 		JButton Six6btn = new JButton("6");
@@ -482,22 +521,35 @@ public class Calculator {
 			}
 		});
 		Six6btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Six6btn.setBounds(253, 508, 56, 56);
+		Six6btn.setBounds(317, 570, 69, 58);
 		frame.getContentPane().add(Six6btn);
 		// subtract
 		JButton Subtractbtn = new JButton("-");
 		Subtractbtn.setBorder(null);
-		Subtractbtn.setBackground(SystemColor.controlHighlight);
+		Subtractbtn.setBackground(SystemColor.control);
 		Subtractbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(textField.getText() == "A")
+				{firstnum =10;}	
+				else if(textField.getText() == "B")
+				{firstnum =11;}	
+				else if(textField.getText() == "C")
+				{firstnum =12;}	
+				else if(textField.getText() == "D")
+				{firstnum =13;}	
+				else if(textField.getText() == "E")
+				{firstnum =14;}	
+				else if(textField.getText() == "F")
+				{firstnum =15;}	
+				else
 				firstnum = Double.parseDouble(textField.getText());
 				// whatever # that is inputted is stored into firstnum
 				textField.setText("");
 				operations = "-";// String variable takes in
 			}
 		});
-		Subtractbtn.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		Subtractbtn.setBounds(314, 508, 56, 56);
+		Subtractbtn.setFont(new Font("Tahoma", Font.BOLD, 24));
+		Subtractbtn.setBounds(394, 570, 69, 58);
 		frame.getContentPane().add(Subtractbtn);
 		// FOURTH ROW OF BUTTONS
 		JButton Ebtn = new JButton("E");
@@ -507,7 +559,7 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNum = textField.getText() + Ebtn.getText();
 				textField.setText(EnterNum);
-				int a = Integer.parseInt(textField.getText());
+				int a = 14;
 				DecTxtField.setText(Integer.toString(a, 10));
 				HexTxtField.setText(Integer.toString(a, 16));
 				BinTxtField.setText(Integer.toString(a, 2));
@@ -516,7 +568,7 @@ public class Calculator {
 		});
 		Ebtn.setForeground(Color.GRAY);
 		Ebtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Ebtn.setBounds(9, 569, 56, 56);
+		Ebtn.setBounds(9, 636, 69, 58);
 		frame.getContentPane().add(Ebtn);
 
 		JButton Fbtn = new JButton("F");
@@ -526,7 +578,7 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNum = textField.getText() + Fbtn.getText();
 				textField.setText(EnterNum);
-				int a = Integer.parseInt(textField.getText());
+				int a = 15;
 				DecTxtField.setText(Integer.toString(a, 10));
 				HexTxtField.setText(Integer.toString(a, 16));
 				BinTxtField.setText(Integer.toString(a, 2));
@@ -535,7 +587,7 @@ public class Calculator {
 		});
 		Fbtn.setForeground(Color.GRAY);
 		Fbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Fbtn.setBounds(70, 569, 56, 56);
+		Fbtn.setBounds(86, 636, 69, 58);
 		frame.getContentPane().add(Fbtn);
 
 		JButton One1btn = new JButton("1");
@@ -553,7 +605,7 @@ public class Calculator {
 			}
 		});
 		One1btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		One1btn.setBounds(131, 569, 56, 56);
+		One1btn.setBounds(163, 636, 69, 58);
 		frame.getContentPane().add(One1btn);
 
 		JButton Two2btn = new JButton("2");
@@ -571,7 +623,7 @@ public class Calculator {
 			}
 		});
 		Two2btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Two2btn.setBounds(192, 569, 56, 56);
+		Two2btn.setBounds(240, 636, 69, 58);
 		frame.getContentPane().add(Two2btn);
 
 		JButton Three3btn = new JButton("3");
@@ -590,53 +642,91 @@ public class Calculator {
 			}
 		});
 		Three3btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Three3btn.setBounds(253, 569, 56, 56);
+		Three3btn.setBounds(317, 636, 69, 58);
 		frame.getContentPane().add(Three3btn);
 		// add
 		JButton Addbtn = new JButton("+");
 		Addbtn.setBorder(null);
-		Addbtn.setBackground(SystemColor.controlHighlight);
+		Addbtn.setBackground(SystemColor.control);
 		Addbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(textField.getText() == "A")
+				{
+					firstnum =10;
+					textField.setText(" ");
+					operations = "+";	
+				}	
+				else if(textField.getText() == "B")
+				{
+					firstnum =11;
+					textField.setText(" ");
+					operations = "+";	
+				}	
+				else if(textField.getText() == "C")
+				{
+					firstnum =12;
+					textField.setText(" ");
+					operations = "+";	
+				}	
+				else if(textField.getText() == "D")
+				{
+					firstnum =13;
+					textField.setText(" ");
+					operations = "+";
+				}	
+				else if(textField.getText() == "E")
+				{
+					firstnum =14;
+					textField.setText(" ");
+					operations = "+";
+				}	
+				else if(textField.getText() == "F")
+				{
+					firstnum =15;
+					textField.setText(" ");
+					operations = "+";
+				}	
+				else {
 				firstnum = Double.parseDouble(textField.getText());
 				// whatever # that is inputted is stored into firstnum
-				textField.setText("");
+				textField.setText(" ");
 				operations = "+";// String variable takes in
+				}
 			}
 		});
-		Addbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Addbtn.setBounds(314, 569, 56, 56);
+		Addbtn.setFont(new Font("Tahoma", Font.BOLD, 19));
+		Addbtn.setBounds(394, 636, 69, 58);
 		frame.getContentPane().add(Addbtn);
 		// FIFTH ROW OF BUTTONS
 		JButton LParthbtn = new JButton("(");
 		LParthbtn.setBorder(null);
-		LParthbtn.setBackground(SystemColor.controlHighlight);
+		LParthbtn.setBackground(SystemColor.control);
 		LParthbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNum = textField.getText() + LParthbtn.getText();
 				textField.setText(EnterNum);
 			}
 		});
-		LParthbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		LParthbtn.setBounds(9, 630, 56, 56);
+		LParthbtn.setFont(new Font("Tahoma", Font.BOLD, 18));
+		LParthbtn.setBounds(9, 702, 69, 58);
 		frame.getContentPane().add(LParthbtn);
 
 		JButton RParthbtn = new JButton(")");
 		RParthbtn.setBorder(null);
-		RParthbtn.setBackground(SystemColor.controlHighlight);
+		RParthbtn.setBackground(SystemColor.control);
 		RParthbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNum = textField.getText() + RParthbtn.getText();
 				textField.setText(EnterNum);
 			}
 		});
-		RParthbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		RParthbtn.setBounds(70, 630, 56, 56);
+		RParthbtn.setFont(new Font("Tahoma", Font.BOLD, 18));
+		RParthbtn.setBounds(86, 702, 69, 58);
 		frame.getContentPane().add(RParthbtn);
 
 		JButton PlusMinusBtn = new JButton("+/-");
 		PlusMinusBtn.setBorder(null);
-		PlusMinusBtn.setBackground(SystemColor.controlHighlight);
+		PlusMinusBtn.setBackground(SystemColor.control);
 		PlusMinusBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double ahh = Double.parseDouble(String.valueOf(textField.getText()));
@@ -644,8 +734,8 @@ public class Calculator {
 				textField.setText(String.valueOf(ahh));
 			}
 		});
-		PlusMinusBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		PlusMinusBtn.setBounds(131, 630, 56, 56);
+		PlusMinusBtn.setFont(new Font("Tahoma", Font.BOLD, 16));
+		PlusMinusBtn.setBounds(163, 703, 69, 58);
 		frame.getContentPane().add(PlusMinusBtn);
 
 		JButton Zero0btn = new JButton("0");
@@ -663,26 +753,25 @@ public class Calculator {
 			}
 		});
 		Zero0btn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Zero0btn.setBounds(192, 630, 56, 56);
+		Zero0btn.setBounds(240, 703, 69, 58);
 		frame.getContentPane().add(Zero0btn);
 		// period
 		JButton Periodbtn = new JButton(".");
 		Periodbtn.setBorder(null);
-		Periodbtn.setBackground(SystemColor.controlHighlight);
+		Periodbtn.setBackground(SystemColor.control);
 		Periodbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNum = textField.getText() + Periodbtn.getText();
 				textField.setText(EnterNum);
 			}
 		});
-		Periodbtn.setVerticalAlignment(SwingConstants.BOTTOM);
-		Periodbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Periodbtn.setBounds(253, 630, 56, 56);
+		Periodbtn.setFont(new Font("Tahoma", Font.BOLD, 19));
+		Periodbtn.setBounds(317, 703, 69, 58);
 		frame.getContentPane().add(Periodbtn);
 		// equals
 		JButton Equalbtn = new JButton("=");
 		Equalbtn.setBorder(null);
-		Equalbtn.setBackground(SystemColor.controlHighlight);
+		Equalbtn.setBackground(SystemColor.control);
 		Equalbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// equals button
@@ -692,7 +781,7 @@ public class Calculator {
 				HexTxtField.setText(null);
 				BinTxtField.setText(null);
 				OctTxtField.setText(null);
-				String answer;
+				String answer ;
 				secondnum = Double.parseDouble(textField.getText());
 				if (operations == "+") {
 					result = firstnum + secondnum;
@@ -700,27 +789,27 @@ public class Calculator {
 					textField.setText(answer);
 				} else if (operations == "-") {
 					result = firstnum - secondnum;
-					answer = String.format("%.2f", result);
+					answer = String.format("%.0f", result);
 					textField.setText(answer);
 
 				} else if (operations == "*") {
 					result = firstnum * secondnum;
-					answer = String.format("%.2f", result);
+					answer = String.format("%.0f", result);
 					textField.setText(answer);
 				} else if (operations == "/") {
 					result = firstnum / secondnum;
-					answer = String.format("%.2f", result);
+					answer = String.format("%.0f", result);
 					textField.setText(answer);
 				} else if (operations == "%") {
 					result = firstnum % secondnum;
-					answer = String.format("%.2f", result);
+					answer = String.format("%.0f", result);
 					textField.setText(answer);
 
 				}
 				// After result is set onto textField, have dec/hex/oct/bin display converted
 				// result only is displays if it's not a fraction
 				// if fraction it doesn't display anything
-				int a = Integer.parseInt(textField.getText());
+				int a = (int)Integer.parseInt(textField.getText());
 				if (a > 1) {
 
 					DecTxtField.setText(Integer.toString(a, 10));
@@ -728,16 +817,16 @@ public class Calculator {
 					BinTxtField.setText(Integer.toString(a, 2));
 					OctTxtField.setText(Integer.toString(a, 8));
 				} else if (a < 1) {
-					DecTxtField.setText(null);
-					HexTxtField.setText(null);
-					BinTxtField.setText(null);
-					OctTxtField.setText(null);
+					DecTxtField.setText("0");
+					HexTxtField.setText("0");
+					BinTxtField.setText("0");
+					OctTxtField.setText("0");
 				}
 
 			}
 		});
-		Equalbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Equalbtn.setBounds(314, 630, 56, 56);
+		Equalbtn.setFont(new Font("Tahoma", Font.BOLD, 18));
+		Equalbtn.setBounds(394, 703, 69, 58);
 		frame.getContentPane().add(Equalbtn);
         //the following buttons aren't meant to work
 		JButton Wordbtn = new JButton("QWORD");
@@ -750,75 +839,81 @@ public class Calculator {
 		});
 		Wordbtn.setForeground(SystemColor.infoText);
 		Wordbtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		Wordbtn.setBounds(131, 270, 110, 45);
+		Wordbtn.setBounds(163, 310, 145, 58);
 		frame.getContentPane().add(Wordbtn);
 
 		JButton LSHbut = new JButton("LSH");
+		LSHbut.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		LSHbut.setForeground(Color.BLACK);
-		LSHbut.setFont(new Font("Tahoma", Font.BOLD, 10));
+		LSHbut.setFont(new Font("Tahoma", Font.BOLD, 12));
 		LSHbut.setBorder(null);
-		LSHbut.setBackground(SystemColor.controlHighlight);
-		LSHbut.setBounds(9, 325, 56, 56);
+		LSHbut.setBackground(SystemColor.control);
+		LSHbut.setBounds(9, 372, 69, 58);
 		frame.getContentPane().add(LSHbut);
 
 		JButton RSHbut = new JButton("RSH");
 		RSHbut.setForeground(Color.BLACK);
-		RSHbut.setFont(new Font("Tahoma", Font.BOLD, 10));
+		RSHbut.setFont(new Font("Tahoma", Font.BOLD, 12));
 		RSHbut.setBorder(null);
-		RSHbut.setBackground(SystemColor.controlHighlight);
-		RSHbut.setBounds(70, 326, 56, 56);
+		RSHbut.setBackground(SystemColor.control);
+		RSHbut.setBounds(85, 372, 69, 58);
 		frame.getContentPane().add(RSHbut);
 
 		JButton btnOr = new JButton("OR");
 		btnOr.setForeground(Color.BLACK);
-		btnOr.setFont(new Font("Tahoma", Font.BOLD, 10));
+		btnOr.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnOr.setBorder(null);
-		btnOr.setBackground(SystemColor.controlHighlight);
-		btnOr.setBounds(131, 326, 56, 56);
+		btnOr.setBackground(SystemColor.control);
+		btnOr.setBounds(163, 372, 69, 58);
 		frame.getContentPane().add(btnOr);
 
 		JButton btnXor = new JButton("XOR");
 		btnXor.setForeground(Color.BLACK);
-		btnXor.setFont(new Font("Tahoma", Font.BOLD, 10));
+		btnXor.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnXor.setBorder(null);
-		btnXor.setBackground(SystemColor.controlHighlight);
-		btnXor.setBounds(192, 326, 56, 56);
+		btnXor.setBackground(SystemColor.control);
+		btnXor.setBounds(240, 372, 69, 58);
 		frame.getContentPane().add(btnXor);
 
 		JButton btnNot = new JButton("NOT");
 		btnNot.setForeground(Color.BLACK);
-		btnNot.setFont(new Font("Tahoma", Font.BOLD, 10));
+		btnNot.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnNot.setBorder(null);
-		btnNot.setBackground(SystemColor.controlHighlight);
-		btnNot.setBounds(253, 326, 56, 56);
+		btnNot.setBackground(SystemColor.control);
+		btnNot.setBounds(317, 372, 69, 58);
 		frame.getContentPane().add(btnNot);
 
 		JButton btnAnd = new JButton("AND");
 		btnAnd.setForeground(Color.BLACK);
-		btnAnd.setFont(new Font("Tahoma", Font.BOLD, 10));
+		btnAnd.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnAnd.setBorder(null);
-		btnAnd.setBackground(SystemColor.controlHighlight);
-		btnAnd.setBounds(314, 326, 56, 56);
+		btnAnd.setBackground(SystemColor.control);
+		btnAnd.setBounds(394, 372, 69, 58);
 		frame.getContentPane().add(btnAnd);
 
 		JButton MSbut = new JButton("MS");
 		MSbut.setForeground(Color.BLACK);
-		MSbut.setFont(new Font("Tahoma", Font.BOLD, 10));
+		MSbut.setFont(new Font("Tahoma", Font.BOLD, 12));
 		MSbut.setBorder(null);
 		MSbut.setBackground(SystemColor.menu);
-		MSbut.setBounds(253, 270, 45, 45);
+		MSbut.setBounds(317, 310, 69, 58);
 		frame.getContentPane().add(MSbut);
 
 		JButton btnM = new JButton("M-");
 		btnM.setForeground(Color.BLACK);
-		btnM.setFont(new Font("Tahoma", Font.BOLD, 10));
+		btnM.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnM.setBorder(null);
 		btnM.setBackground(SystemColor.menu);
-		btnM.setBounds(322, 270, 45, 45);
+		btnM.setBounds(394, 310, 69, 58);
 		frame.getContentPane().add(btnM);
         //Give it the windows 10 feel of having options
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(0, 0, 29, 26);
+		menuBar.setBorderPainted(false);
+		menuBar.setBackground(SystemColor.controlHighlight);
+		menuBar.setBounds(11, 10, 29, 26);
 		frame.getContentPane().add(menuBar);
 
 		JMenu mnFile = new JMenu("");
@@ -850,3 +945,4 @@ public class Calculator {
 		mnFile.add(mntmNewMenuItem_1);
 	}
 }
+
